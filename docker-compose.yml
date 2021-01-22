@@ -1,0 +1,9 @@
+version: "3"
+services:
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/tmp:cached
+    command: sh -c 'tail -f /dev/null'
